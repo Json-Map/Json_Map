@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--begin::Head-->
+
+<head>
+	<title>Json Visualizer</title>
+	<meta charset="utf-8" />
+	<link rel="shortcut icon" href="../assets/media/logos/logo.png" />
+	<!--begin::Fonts-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
+	<!--end::Fonts-->
+	<!--begin::Global Stylesheets Bundle(used by all pages)-->
+	<link href="../../assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+	<!--end::Global Stylesheets Bundle-->
+</head>
+<!--end::Head-->
+<!--begin::Body-->
+
+<body data-kt-name="metronic" id="kt_body" class="app-blank">
+	<div class="d-flex flex-column flex-root">
+		<!--begin::Authentication - Sign-up -->
+		<div class="d-flex flex-column flex-lg-row flex-column-fluid">
+			<!--begin::Body-->
+			<div class="d-flex flex-column flex-lg-row-fluid w-lg-50 p-10 order-2 order-lg-1">
+				<!--begin::Form-->
+				<div class="d-flex flex-center flex-column flex-lg-row-fluid">
+					<!--begin::Wrapper-->
+					<div class="w-lg-500px p-10">
+						<!--begin::Form-->
+						<form class="form w-100" novalidate="novalidate" id="kt_sign_up_form"
+							data-kt-redirect-url="../view/authentication/layouts/corporate/sign-in.html" action="#">
+							<!--begin::Heading-->
+							<div class="text-center mb-11">
+								<h1 class="text-dark fw-bolder mb-3">Sign Up</h1>
+							</div>
+							<div class="row g-3 mb-9">
+							</div>
+							<div class="separator separator-content my-14">
+								<span class="w-125px text-gray-500 fw-semibold fs-7">Or with email</span>
+							</div>
+							<!--end::Separator-->
+							<!--begin::Input group=-->
+							<div class="fv-row mb-8">
+								<!--begin::Email-->
+								<input type="text" placeholder="Email" name="email" autocomplete="off"
+									class="form-control bg-transparent" />
+								<!--end::Email-->
+							</div>
+							<!--begin::Input group-->
+							<div class="fv-row mb-8" data-kt-password-meter="true">
+								<!--begin::Wrapper-->
+								<div class="mb-1">
+									<!--begin::Input wrapper-->
+									<div class="position-relative mb-3">
+										<input class="form-control bg-transparent" type="password"
+											placeholder="Password" name="password" autocomplete="off" />
+										<span
+											class="btn btn-sm btn-icon position-absolute translate-middle top-50 end-0 me-n2"
+											data-kt-password-meter-control="visibility">
+											<i class="bi bi-eye-slash fs-2"></i>
+											<i class="bi bi-eye fs-2 d-none"></i>
+										</span>
+									</div>
+									<!--end::Input wrapper-->
+									<!--begin::Meter-->
+									<div class="d-flex align-items-center mb-3"
+										data-kt-password-meter-control="highlight">
+										<div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2">
+										</div>
+										<div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2">
+										</div>
+										<div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2">
+										</div>
+										<div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px"></div>
+									</div>
+									<!--end::Meter-->
+								</div>
+								<!--end::Wrapper-->
+								<!--begin::Hint-->
+								<div class="text-muted">Use 8 or more characters with a mix of letters, numbers &amp;
+									symbols.</div>
+								<!--end::Hint-->
+							</div>
+							<!--end::Input group=-->
+							<!--end::Input group=-->
+							<div class="fv-row mb-8">
+								<!--begin::Repeat Password-->
+								<input placeholder="Repeat Password" name="confirm-password" type="password"
+									autocomplete="off" class="form-control bg-transparent" />
+								<!--end::Repeat Password-->
+							</div>
+							<!--end::Input group=-->
+							<!--begin::Accept-->
+							<div class="fv-row mb-8">
+								<label class="form-check form-check-inline">
+									<input class="form-check-input" type="checkbox" name="toc" value="1" />
+									<span class="form-check-label fw-semibold text-gray-700 fs-base ms-1">I Accept the
+										<a href="#" class="ms-1 link-primary">Terms</a></span>
+								</label>
+							</div>
+							<!--end::Accept-->
+							<!--begin::Submit button-->
+							<div class="d-grid mb-10">
+								<button type="submit" id="kt_sign_up_submit" class="btn btn-primary">
+									<!--begin::Indicator label-->
+									<span class="indicator-label">Sign up</span>
+									<span class="indicator-progress">Please wait...</span>
+										<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+									<!--end::Indicator progress-->
+								</button>
+							</div>
+							<div class="text-gray-500 text-center fw-semibold fs-6">Already have an Account?
+								<a href="./sign-in.html" class="link-primary fw-semibold">Sign in</a>
+							</div>
+							<!--end::Sign up-->
+						</form>
+					</div>
+					<!--end::Wrapper-->
+				</div>
+			</div>
+		</div>
+		<!--end::Authentication - Sign-up-->
+	</div>
+	<script>var hostUrl = "assets/";</script>
+	<script src="../../assets/plugins/global/plugins.bundle.js"></script>
+	<script src="../../assets/js/scripts.bundle.js"></script>
+	<script src="../../assets/js/custom/authentication/sign-in/general.js"></script>
+
+</body>
+<!--end::Body-->
+
+</html>
