@@ -1,13 +1,11 @@
 # Json Map
 
-Visualisez de manière transparente vos données JSON instantanément .
+JsonMap is designed to make it easier to read JSON files to ensure that projects run smoothly. 
 
 ## Installation
 
-le lien pour tester 
-
 ```bash
-https://json-map.github.io/Json_Map/public/
+git clone https://github.com/Json-Map/Json_Map.git
 ```
 
 
