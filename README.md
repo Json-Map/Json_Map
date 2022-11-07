@@ -5,7 +5,7 @@ JsonMap is designed to make it easier to read JSON files to ensure that projects
 ## Installation
 
 ```bash
-git clone https://json-map.github.io/Json_Map/public/
+git clone https://github.com/Json-Map/Json_Map.git
 ```
 
 
