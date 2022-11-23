@@ -5,7 +5,7 @@ const invalidJson = document.getElementById("invalid_json");
 const jsonInput = document.getElementById("json_input");
 const mainElement = document.getElementById("mainEl");
 
-jsonInput.addEventListener("keyup", function () {
+jsonInput.addEventListener("keyup", function() {
   //check if there is data first
   if (this.value.trim() !== "") {
     //check if json is valid json
@@ -155,4 +155,35 @@ function treeTOhtml(tree) {
       }
     }
   }
+}
+
+async function newFile(){
+  const input = document.createElement('input');
+  input.style.visibility = 'hidden';
+  input.type = 'file';
+  input.onchange = e => { 
+      // getting a hold of the file reference
+      const file = e.target.files[0];
+      // setting up the reader
+      const reader = new FileReader();
+      reader.readAsText(file,'UTF-8');
+      // here we tell the reader what to do when it's done reading...
+      reader.onload = readerEvent => {
+          let content = readerEvent.target.result; // this is the content!
+          document.getElementById('json_input').value = content;
+          try {
+            JSON.parse(content);
+          } catch (error) {
+            validJson.classList.add("hidden");
+            invalidJson.classList.remove("hidden");
+            return;
+          }
+          const tree = JSONCracker(JSON.parse(content));
+          treeTOhtml(tree);
+          invalidJson.classList.add("hidden");
+          validJson.classList.remove("hidden");
+      }
+      
+  }
+  input.click();
 }
