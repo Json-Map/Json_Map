@@ -187,3 +187,10 @@ async function newFile(){
   }
   input.click();
 }
+
+function deleteJsonContent()
+{
+  document.getElementById('json_input').value = '';
+  invalidJson.classList.add("hidden");
+  validJson.classList.remove("hidden");
+}
