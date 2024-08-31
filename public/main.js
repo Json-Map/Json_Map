@@ -104,6 +104,7 @@ function JSONCracker(object) {
   }
   //invoke main
   main(object);
+  console.log(tree);
   return tree;
 }
 
