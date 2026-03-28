@@ -937,3 +937,23 @@ video {
     width: 75%;
   }
 }
+
+.div-content-btn{
+  position: relative;
+}
+.btn-submit-textarea {
+  position: absolute;
+  top: 9%;
+  right: 5%;
+  border: solid 2px #6b7280;
+  color: #6b7280;
+  border-radius: 5px;
+  font-size: 13px;
+  text-align: center;
+  padding: 1px 4px;
+  font-weight: bold;
+}
+button.btn-submit-textarea:hover {
+  background: #6b7280;
+  color: #202225;
+}

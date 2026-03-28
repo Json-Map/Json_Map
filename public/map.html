@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="output.css" />
-    <title>Document</title>
+    <title>Json Map</title>
   </head>
   <body class="font-Catamaran flex">
     <header
@@ -15,14 +15,15 @@
         <h1
           class="text-center tracking-tighter border-b border-gray-500 pb-2 pt-2 px-1"
         >
-          <span class="font-bold text-4xl text-[#faa81a]">J</span>
-          <span class="font-bold text-4xl text-[#dcddde]">C</span>
+          <img src="../assets/media/logos/logo.png" alt="Json-map-logo">
         </h1>
         <nav>
           <button
             class="w-full p-1 text-gray-500 hover:text-gray-400 transition-all duration-75 flex items-center justify-center my-3"
+            title="Upload File"
           >
             <svg
+              onclick="newFile()"
               stroke="currentColor"
               fill="currentColor"
               stroke-width="0"
@@ -38,6 +39,7 @@
           </button>
           <button
             class="w-full p-1 text-gray-500 hover:text-gray-400 transition-all duration-75 flex items-center justify-center my-3"
+            title="Rotate Layout"
           >
             <svg
               stroke="currentColor"
@@ -58,28 +60,7 @@
           </button>
           <button
             class="w-full p-1 text-gray-500 hover:text-gray-400 transition-all duration-75 flex items-center justify-center my-3"
-          >
-            <svg
-              stroke="currentColor"
-              fill="none"
-              stroke-width="0"
-              viewBox="0 0 24 24"
-              height="2em"
-              width="2em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1.5033 6H3.5033V11H7.6749L5.84644 9.17154L7.26066 7.75732L11.5033 12L7.26066 16.2426L5.84644 14.8284L7.67483 13H3.5033V18H1.5033V6Z"
-                fill="currentColor"
-              ></path>
-              <path
-                d="M20.4967 6H22.4967V18H20.4967V13H16.3251L18.1536 14.8285L16.7393 16.2427L12.4967 12L16.7393 7.75739L18.1536 9.17161L16.3252 11H20.4967V6Z"
-                fill="currentColor"
-              ></path>
-            </svg>
-          </button>
-          <button
-            class="w-full p-1 text-gray-500 hover:text-gray-400 transition-all duration-75 flex items-center justify-center my-3"
+            title="Save Json"
           >
             <svg
               stroke="currentColor"
@@ -97,8 +78,10 @@
           </button>
           <button
             class="w-full p-1 text-gray-500 hover:text-gray-400 transition-all duration-75 flex items-center justify-center my-3"
+            title="Clear Json"
           >
             <svg
+              onclick="deleteJsonContent()"
               stroke="currentColor"
               fill="currentColor"
               stroke-width="0"
@@ -114,6 +97,7 @@
           </button>
           <button
             class="w-full p-1 text-gray-500 hover:text-gray-400 transition-all duration-75 flex items-center justify-center my-3"
+            title="Share"
           >
             <svg
               stroke="currentColor"
@@ -192,7 +176,7 @@
     <aside
       class="lg:w-3/12 w-4/12 h-screen border-x border-gray-700 overflow-hidden flex"
     >
-      <div class="flex flex-col h-full w-full">
+      <div class="div-content-btn flex flex-col h-full w-full">
         <div class="w-full bg-primary-400 h-[7%] px-3 flex items-center">
           <div
             id="valid_json"
